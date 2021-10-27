@@ -4,7 +4,7 @@ import Lib
 
 main :: IO ()
 main = do
-  let n = 6
+  let n = 5
       u = 0
       v = 0
       w = 0
