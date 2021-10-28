@@ -73,6 +73,7 @@ d3f' n size (x0', y0', z0') (x1', y1', z1')
     y' = y1' * 0.5
     z' = z1' * 0.5
 
-d3f n size (u, v, w) = d3f' n size (0, 0, 0) (u * n2, v * n2, w * n2) / n2 ** 6
+d3f :: Int -> (Double, Double, Double) -> (Double, Double, Double) -> Double
+d3f n size (u, v, w) = d3f' n size (0, 0, 0) (abs u * n2, abs v * n2, abs w * n2) / n2 ** 6
   where
-    n2 = 2 ** n
+    n2 = fromIntegral $ 2 ^ n
